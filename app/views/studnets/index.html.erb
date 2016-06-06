@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Listing Studnets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>Color</th>
+      <th>Gpa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studnets.each do |studnet| %>
+      <tr>
+        <td><%= studnet.name %></td>
+        <td><%= studnet.weight %></td>
+        <td><%= studnet.height %></td>
+        <td><%= studnet.color %></td>
+        <td><%= studnet.gpa %></td>
+        <td><%= link_to 'Show', studnet %></td>
+        <td><%= link_to 'Edit', edit_studnet_path(studnet) %></td>
+        <td><%= link_to 'Destroy', studnet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Studnet', new_studnet_path %>

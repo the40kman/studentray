@@ -1,0 +1,2 @@
+module StudnetsHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @studnet.name %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @studnet.weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @studnet.height %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @studnet.color %>
+</p>
+
+<p>
+  <strong>Gpa:</strong>
+  <%= @studnet.gpa %>
+</p>
+
+<%= link_to 'Edit', edit_studnet_path(@studnet) %> |
+<%= link_to 'Back', studnets_path %>
